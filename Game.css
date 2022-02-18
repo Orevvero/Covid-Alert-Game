@@ -1,0 +1,199 @@
+html {
+	background-color: black;
+	font-family: sans-serif;
+}
+
+@font-face{
+	font-family: Megrim;
+}
+
+h1{
+	font-family: Megrim;
+	font-size: 15em;
+	color: white;
+}
+
+.container{
+	position: absolute;
+	z-index: 1;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-shadow: 0 0 10px #fff, 0 0 20px #7FFF00, 0 0 30px #7FFF00, 0 0 40px #7FFF00, 0 0 50px #7FFF00, 0 0 60px #7FFF00, 0 0 70px #7FFF00;
+}
+
+#h1{
+	text-align: center;
+}
+
+#neon{font-family: Megrim;
+	flex-flow: row;
+	color: #d9fdff;
+	font-size: 4rem;
+	text-shadow: 0 0 10px #fff, 0 0 20px #00d2ff, 0 0 30px #00d2ff, 0 0 40px #00d2ff, 0 0 50px #00d2ff, 0 0 60px #00d2ff, 0 0 70px #00d2ff;
+
+}
+#letter{
+	display: inline-block;
+		transform: translate(-0.1rem, 1rem) rotate(10deg);
+		animation: flicker 3s ease-in-out infinite alternate;
+}
+
+@keyframes flicker{
+	0% {opacity: 1;
+		transform: translate(-0.1rem, 1rem) rotate(10deg);}
+	5% {opacity: 1;
+		transform: translate(-0.1rem, 1rem) rotate(10deg);}
+	5.5% {opacity: 0;
+		  transform: translate(-0.1rem, 1rem) rotate(10deg);}
+	6% {opacity: 1;
+		transform: translate(-0.1rem, 1rem) rotate(10deg);}
+	50% {opacity: 1;
+		 transform: translate(-0.1rem, 1rem) rotate(15deg);}
+	100% {opacity: 1;
+		  transform: translate(-0.1rem, 1rem) rotate(10deg);}
+}
+
+#letter2{
+	display: inline-block;
+		transform: translate(-0.1rem, 0rem) rotate(0deg);
+		animation: flicker2 2s ease-in-out infinite alternate;
+		flex-flow: row;
+	color: #d9fdff;
+	text-shadow: 0 0 10px #fff, 0 0 20px #00d2ff, 0 0 30px #00d2ff, 0 0 40px #00d2ff, 0 0 50px #00d2ff, 0 0 60px #00d2ff, 0 0 70px #00d2ff;
+}
+
+
+@keyframes flicker2{
+	0% {opacity: 1;
+		transform: translate(-0.1rem, 0rem) rotate(0deg);}
+	5% {opacity: 1;
+		transform: translate(-0.1rem, 0rem) rotate(0deg);}
+	5.5% {opacity: 0;
+		  transform: translate(-0.1rem, 0rem) rotate(0deg);}
+	6% {opacity: 1;
+		transform: translate(-0.1rem, 0rem) rotate(0deg);}
+	50% {opacity: 1;
+		 transform: translate(-0.1rem, 0rem) rotate(10deg);}
+	100% {opacity: 1;
+		  transform: translate(-0.1rem, 0rem) rotate(0deg);}
+}
+
+#noneon{
+	font-family: Megrim;
+	color: white;
+	letter-spacing: +0.05em;
+}
+#green{
+	font-family: Megrim;
+	color: #7FFF00;
+	text-shadow: 0 0 10px #fff, 0 0 20px #7FFF00, 0 0 30px #7FFF00, 0 0 40px #7FFF00, 0 0 50px #7FFF00, 0 0 60px #7FFF00, 0 0 70px #7FFF00;
+	letter-spacing: +0.05em;
+}
+#game{
+	margin: 0 auto;
+	width: 500px;
+	height: 200px;
+	border: 1px solid lightblue;
+	background-image: url('images/hospital_background.png');
+	background-color: white;
+	position: relative;
+	box-shadow:  0 0 20px #00d2ff, 0 0 30px #00d2ff, 0 0 40px #00d2ff, 0 0 50px #00d2ff, 0 0 60px #00d2ff, 0 0 70px #00d2ff;
+	overflow-x: hidden;
+	margin-bottom: 50px;
+	}
+
+.moebel{
+	height: 150px;
+	width: 500px;
+	background: url('images/moebel.png');
+	display: block;
+	position: absolute;
+	bottom: 50px;
+	background-repeat: repeat-x;
+	animation: move 5s infinite linear;
+	animation-play-state: running;
+}
+/*Animation*/
+@keyframes move{
+	0%{left: 500px;}
+	100%{left: -50px;}
+	100%{transform: translateX(-500px)}
+}
+
+
+
+#player{
+
+	width: 30px;
+	height: 50px;
+	background-color: transparent;
+	background-image: url('images/player.png');
+	position: relative;
+	top: 150px;
+}
+.animate{
+	animation: jump 500ms;
+
+}
+
+@keyframes jump{
+	0%{top: 150px;}
+	30%{top: 100px;}
+	70%{top: 100px;}
+	100%{top:150px;}
+}
+#virus{
+	width: 20px;
+	height: 20px;
+	background-color: transparent;
+	background-image: url('images/virus2.png');
+	position: relative;
+	top: 130px;
+	left: 480px;
+	animation: virus 1s infinite linear;
+	animation-play-state: paused;
+	animation-delay:1s;
+}
+@keyframes virus{
+	0%{left: 480px;}
+	100%{left: -40px;}
+}
+#blitz::before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url('images/blitz.png');
+	top: -200px;
+	transform: rotate(180deg);
+	animation: blitz 5s linear infinite;
+	opacity: 1;
+}
+@keyframes blitz{
+	0%{ opacity: 0;}
+	20%{ opacity: 0;}
+	21%{ opacity: 1;}
+	25%{ opacity: 0;}
+	30%{opacity: 0;}
+	31%{opacity: 1;}
+	35%{opacity: 0;}
+	100%{opacity: 0;}
+}
+
+
+button{
+	margin: 0 auto;
+	padding: 10px 20px;
+	font-family: Megrim;
+	font-size: 20px;
+	color:white;
+	line-height: 30px;
+	min-width: 100px;
+	text-align: center;
+	cursor: pointer;
+	background: linear-gradient(to right bottom,#273c75, #079992);
+	border-radius: 5px;
+	height: 50px;
+	box-shadow: 0 0 10px #fff, 0 0 20px #00d2ff, 0 0 30px #00d2ff,0 0 40px #00d2ff, 0 0 50px #00d2ff;
+}
