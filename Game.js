@@ -51,19 +51,16 @@ var checkDead = setInterval(function(){
 },10);
 
 
-var audio = document.getElementById ('audio');
-var playPauseBTN = document.getElementById ('playPauseBTN');
-var count = 0;
+var audio = document.getElementById('audio');
+var playPauseBTN = document.getElementById('playPauseBTN');
 
-function playPause(eventID){
-	console.log(eventID);
-
-	if(eventID == count == 0){
-		count = 1;
+function playPause(ele) {
+	if(audio.paused) {
 		audio.play();
-	}else{
-		count = 0;
+		ele.innerHTML = 'Stop &#9611;';
+	} else {
 		audio.pause();
+		ele.innerHTML = 'Play &#9658;';
 	}
 }
 

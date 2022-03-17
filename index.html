@@ -1,42 +1,43 @@
 <!DOCTYPE html>
-<html lang="de" >
+<html lang="en" >
     <head>
-    	<link rel="stylesheet" type="text/css" href="Game.css">
         <meta charset="utf-8" />
         <title>Game</title>
-        <script src="Game.js" type="text/javascript" defer=""></script>
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="stylesheet" type="text/css" href="Game.css" />
+        <script src="Game.js" type="text/javascript" defer></script>
     </head>
     <body>
-    	<div class="container"><h1 id="count" onclick="jump(this.id)">5</h1></div>
-        <div>
-    	   <audio id="audio">
-    		<source src="sounds/gamemelody.wav" type="audio/wav">
-    		Your browser does not support the HTML audio tag. So, you're not deaf! Yeah!
-    	   </audio>
-        
-            <button id="playPauseBTN" onclick="playPause(this.id)">Play &#9658;</button>
-            &nbsp;
-            &nbsp;
-            <button>Stop &#9611;</button>
+    	<div class="container">
+            <h1 id="count" onclick="jump(this.id)">5</h1>
         </div>
 
-    	<center><h1 id="neon"><span id="letter">!</span>ALERT<span id="letter">!</span><p></p></h1>
-    		
-    	<h1 id="neon">!COVID WANTS YOU!</h1>
+        <div class="nav-sounds">
+            <audio id="audio" src="sounds/gamemelody.mp3"></audio>
+            <button id="playPauseBTN" onclick="playPause(this)">Play &#9658;</button>
+        </div>
+
+    	<center>
+            <h1 id="neon"><span id="letter">!</span>ALERT<span id="letter">!</span><p></p></h1>
+    	    <h1 id="neon">!COVID WANTS YOU!</h1>
     	</center>
+
     	<div id="game" onclick="jump(this.id)" >
     		<div class="moebel" ></div>
     		<div id="player"></div>
     		<div id="virus"></div>	
     	</div>
+
     	<center>
-    	<h2 id="noneon">Wanna safe yourself ?</h2>
-    	<h2 id="noneon">Jump over the <span id="green">VIRUS</span> !</h2>
-    	<h3 id="noneon"><span id="letter2" onclick="jump('Click')" >
-        Click on Floor</span> to jump</h3>
-        <h3 id="noneon">Click on <span id="green">5</span> to start countdown</h3>
+        	<h2 id="noneon">Wanna safe yourself ?</h2>
+        	<h2 id="noneon">Jump over the <span id="green">VIRUS</span> !</h2>
+        	<h3 id="noneon"><span id="letter2" onclick="jump('Click')" >
+            Click on Floor</span> to jump</h3>
+            <h3 id="noneon">Click on <span id="green">5</span> to start countdown</h3>
     	</center>
+
     	<div id="blitz"></div>
     </body>
-    </html>
+</html>
