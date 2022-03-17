@@ -182,18 +182,23 @@ h1{
 }
 
 
-button{
+button {
 	margin: 0 auto;
 	padding: 10px 20px;
 	font-family: Megrim;
 	font-size: 20px;
 	color:white;
 	line-height: 30px;
-	min-width: 100px;
+	min-width: 125px; /* prevent jumping */
 	text-align: center;
 	cursor: pointer;
 	background: linear-gradient(to right bottom,#273c75, #079992);
 	border-radius: 5px;
 	height: 50px;
 	box-shadow: 0 0 10px #fff, 0 0 20px #00d2ff, 0 0 30px #00d2ff,0 0 40px #00d2ff, 0 0 50px #00d2ff;
+}
+
+.nav-sounds {
+	position: relative;
+	z-index: 1000; /* put sounds buttons on top */
 }
